@@ -37,7 +37,7 @@ exports.registerAdmin = async (req, res) => {
         _id: admin._id,
         username: admin.username,
         email: admin.email,
-        profilePicture: admin.profilePicture ? `http://localhost:8011${admin.profilePicture}` : null,
+        profilePicture: admin.profilePicture ? `https://api.svkangrowhealth.com${admin.profilePicture}` : null,
       },
     });
   } catch (error) {
@@ -63,7 +63,7 @@ exports.loginAdmin = async (req, res) => {
         _id: admin._id,
         username: admin.username,
         email: admin.email,
-        profilePicture: admin.profilePicture ? `http://localhost:8011${admin.profilePicture}` : null,
+        profilePicture: admin.profilePicture ? `https://api.svkangrowhealth.com${admin.profilePicture}` : null,
       },
     });
   } catch (error) {
@@ -106,7 +106,7 @@ exports.updateAdminProfile = async (req, res) => {
         _id: admin._id,
         username: admin.username,
         email: admin.email,
-        profilePicture: admin.profilePicture ? `http://localhost:8011${admin.profilePicture}` : null,
+        profilePicture: admin.profilePicture ? `https://api.svkangrowhealth.com${admin.profilePicture}` : null,
       },
     });
   } catch (error) {
