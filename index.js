@@ -11,7 +11,7 @@ const industryRoutes = require('./routes/industryRoutes')
 const bannerRoutes = require('./routes/bannerRoutes')
 const teamRoutes = require('./routes/teamRoutes')
 const adminRoutes = require('./routes/adminRoutes')
-
+const paymentRoutes = require("./routes/payment");
 
 dotenv.config();
 const app = express();
@@ -77,13 +77,13 @@ app.use('/api/industries', industryRoutes);
 app.use('/api/banners', bannerRoutes);
 app.use('/api/teams', teamRoutes);
 app.use('/api/admin', adminRoutes);
-
+app.use("/api/payment", paymentRoutes);
 app.use((req, res, next) => {
   res.status(404).json({ error: "Route not found" });
 });
 
 
-const PORT = process.env.PORT || 8011;
+const PORT = process.env.PORT || 8022;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
